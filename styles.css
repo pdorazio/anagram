@@ -36,5 +36,21 @@ h1{
 
 .result{
     background-color: #DADADA;
-    
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 10px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+.result.result-positive{
+    background-color: #DEF0A5;
+}
+
+.result.result-negative{
+    background-color: #FFD4CC;
+}
+
+.result-text{
+    vertical-align: center;
 }

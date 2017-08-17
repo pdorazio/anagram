@@ -12,10 +12,10 @@ $(document).ready(function() {
         var word2 = $('#word2').val();
 
         // check if length is equal
-        if (word1.length != word2.length){
-            $('body').append("not anagrams");
-            return;
-        }
+        // if (word1.length != word2.length){
+        //     $('body').append("not anagrams");
+        //     return;
+        // }
 
         // TODO: should i check that words are, like... words?
 
@@ -31,9 +31,12 @@ $(document).ready(function() {
         // compare arrays
 
         if (arraysEqual(array1, array2)){
-            $('body').append('<p>' + word1 + ' ' + word2 + ' are anagrams. </p>')
+            //$('body').append('<p>' + word1 + ' ' + word2 + ' are anagrams. </p>')
+            $('body').append('<div class="result result-positive"><p class="result-text">' + word1 + ' and ' + word2 +  ' are anagrams. </p></div>')
         }else{
-            $('body').append("<p> not anagrams </p>");
+            //$('body').append("<p> not anagrams </p>");
+            $('body').append('<div class="result result-negative"><p class="result-text">' + word1 + ' and ' + word2 +  ' are not anagrams. </p></div>')
+
         }
 
         // $('body').append('<p>' + word1 + ' ' + word2 + '</p>')
@@ -58,3 +61,5 @@ function arraysEqual(a, b) {
 }
 
 // TODO: are we checking for anagram phrases?
+
+// TODO: add spans so i can style word1 and word2 in their result row.
