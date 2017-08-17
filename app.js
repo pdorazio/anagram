@@ -32,10 +32,11 @@ $(document).ready(function() {
 
         if (arraysEqual(array1, array2)){
             //$('body').append('<p>' + word1 + ' ' + word2 + ' are anagrams. </p>')
-            $('#results').prepend('<div class="result result-positive"><p class="result-text">' + word1 + ' and ' + word2 +  ' are anagrams. </p></div>')
+            $('#results').prepend('<div class="result result-positive"><p class="result-text">' + '<span class="positive-text">' + word1 + '</span> and <span class="positive-text">' + word2 +  '</span> are anagrams. </p></div>')
         }else{
             //$('body').append("<p> not anagrams </p>");
-            $('#results').prepend('<div class="result result-negative"><p class="result-text">' + word1 + ' and ' + word2 +  ' are not anagrams. </p></div>')
+            //$('#results').prepend('<div class="result result-negative"><p class="result-text">' + word1 + ' and ' + word2 +  ' are not anagrams. </p></div>')
+            $('#results').prepend('<div class="result result-negative"><p class="result-text">' + '<span class="negative-text">' + word1 + '</span> and <span class="negative-text">' + word2 +  '</span> are not anagrams. </p></div>')
 
         }
 

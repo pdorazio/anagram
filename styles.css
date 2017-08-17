@@ -58,3 +58,13 @@ h1{
     vertical-align: middle;
     display: table-cell;
 }
+
+.positive-text{
+    font-weight: bold;
+    color: #8BB901;
+}
+
+.negative-text{
+    font-weight: bold;
+    color: #EC0C1C;
+}
