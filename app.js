@@ -3,7 +3,7 @@
  */
 $(document).ready(function() {
 
-    var checkBtn = $('#check');
+    var checkBtn = $('#btn-check');
 
     checkBtn.click(function(){
         // $('body').append('<p>testing</p>')
@@ -17,11 +17,14 @@ $(document).ready(function() {
             return;
         }
 
+        // TODO: should i check that words are, like... words?
+
         // split word into array
         var array1 = word1.split("");
         var array2 = word2.split("");
 
         // sort and rearrange array
+        // alpha ascending is default...
         array1.sort();
         array2.sort();
 
@@ -54,4 +57,4 @@ function arraysEqual(a, b) {
     return true;
 }
 
-//TODO: are we checking for anagram phrases?
+// TODO: are we checking for anagram phrases?

@@ -1,3 +1,40 @@
 body {
-    background-color: aquamarine;
+    background-color: #e9e9e9;
+}
+
+h1{
+    margin-left: 50px;
+}
+
+#main-card{
+    background-color: #ffffff;
+    border-radius: 20px;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+#inputs{
+    margin: 0 auto;
+    width: 50%;
+}
+
+#btn-check{
+    background-color: #2da8e4;
+    color: #ffffff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    margin-top: 50px;
+}
+
+#btn-check:hover{
+    background-color: #31BBFF;
+}
+
+.result{
+    background-color: #DADADA;
+    
 }
