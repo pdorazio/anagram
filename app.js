@@ -7,6 +7,7 @@ $(document).ready(function() {
 
     checkBtn.click(function(){
         // $('body').append('<p>testing</p>')
+        console.log("CLICK");
 
         var word1 = $('#word1').val();
         var word2 = $('#word2').val();
@@ -16,6 +17,10 @@ $(document).ready(function() {
         //     $('body').append("not anagrams");
         //     return;
         // }
+
+        if (word1.length < 1 || word2.length < 1){
+            return;
+        }
 
         // TODO: should i check that words are, like... words?
 
@@ -37,8 +42,10 @@ $(document).ready(function() {
             //$('body').append("<p> not anagrams </p>");
             //$('#results').prepend('<div class="result result-negative"><p class="result-text">' + word1 + ' and ' + word2 +  ' are not anagrams. </p></div>')
             $('#results').prepend('<div class="result result-negative"><p class="result-text">' + '<span class="negative-text">' + word1 + '</span> and <span class="negative-text">' + word2 +  '</span> are not anagrams. </p></div>')
-
         }
+
+        $('#word1').val("");
+        $('#word2').val("");
 
         // $('body').append('<p>' + word1 + ' ' + word2 + '</p>')
 
