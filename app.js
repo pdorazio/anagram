@@ -9,12 +9,12 @@ $(document).ready(function() {
     checkBtn.click(function(){
 
         // get input strings
-        var word1 = $('#word1').val();
-        var word2 = $('#word2').val();
+        var input1 = $('#word1').val();
+        var input2 = $('#word2').val();
 
         // strip whitespace to detect anagram phrases
-        word1.replace(/ /g, "");
-        word2.replace(/ /g, "");
+        word1 = input1.replace(/\s+/g, "");
+        word2 = input2.replace(/\s+/g, "");
 
         // return if empty
         if (word1.length < 1 || word2.length < 1){
@@ -32,9 +32,9 @@ $(document).ready(function() {
 
         // compare arrays
         if (arraysEqual(array1, array2)){
-            $('#results').prepend('<div class="result result-positive"><p class="result-text">' + '<span class="positive-text">' + word1 + '</span> and <span class="positive-text">' + word2 +  '</span> are anagrams. </p></div>')
+            $('#results').prepend('<div class="result result-positive"><p class="result-text">' + '<span class="positive-text">' + input1 + '</span> and <span class="positive-text">' + input2 +  '</span> are anagrams. </p></div>')
         }else{
-            $('#results').prepend('<div class="result result-negative"><p class="result-text">' + '<span class="negative-text">' + word1 + '</span> and <span class="negative-text">' + word2 +  '</span> are not anagrams. </p></div>')
+            $('#results').prepend('<div class="result result-negative"><p class="result-text">' + '<span class="negative-text">' + input1 + '</span> and <span class="negative-text">' + input2 +  '</span> are not anagrams. </p></div>')
         }
 
         // reset input fields
